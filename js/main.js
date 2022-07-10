@@ -73,7 +73,7 @@ function createProductContainer(product, isGrey) {
     let buttonContainer = document.createElement("div")
     buttonContainer.classList.add("buttonContainer")
     buttonContainer.addEventListener("click", () => {
-        console.log("Bonjour")
+        addToCart(product)
     })
 
     let icon = document.createElement("i")
@@ -96,5 +96,63 @@ function createProductContainer(product, isGrey) {
 
 window.addEventListener("load", () => {
     initSite(); 
-    
+    getNrOfCartItems();
 })
+
+function addToCart(product) {
+
+    let cart = localStorage.getItem("cart")
+
+    if(cart) {
+        cart = JSON.parse(cart)
+    } else {
+        cart = []
+    }
+
+    let productIndex = cart.findIndex((cartItem) => {
+        return cartItem.product.title == product.title
+
+    })
+
+    if(productIndex >= 0) {
+        cart[productIndex].quantity++
+
+        alert("The product " + product.title + " has been added to your cart")
+    
+    } else {
+        cart.push({
+            product:product,
+            quantity: 1
+        })
+        
+        alert("The product " + product.title + " has been added to your cart")
+    }
+
+    localStorage.setItem("cart", JSON.stringify(cart))
+
+    getNrOfCartItems()
+}
+
+function getNrOfCartItems() {
+
+    let savedProducts = document.getElementsByTagName("span")[0]
+
+    let cart = localStorage.getItem("cart")
+
+    let amount = 0
+
+    if(!cart) {
+        savedProducts.innerText = amount
+        return
+
+    }
+
+    cart = JSON.parse(cart)
+    cart.forEach(cartItem => {
+        amount += cartItem.quantity
+    });
+
+
+    savedProducts.innerText = amount
+
+}
