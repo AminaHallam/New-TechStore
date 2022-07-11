@@ -4,6 +4,22 @@ main {
     justify-content: center;
 }
 
+.continueShopping {
+
+    display: flex;
+    align-items: center;
+    margin-left: 18%;
+    padding: 20px;
+    
+    width: 180px;
+    height: 30px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    text-decoration: underline;
+    
+}
+
 .itemContainer {
     display: flex;
     justify-content: center;
@@ -225,7 +241,7 @@ main {
     .removeItemButtonContainer {
         align-items: center;
         justify-content: center;
-        font-size: 11px;
+        
         padding: 11px;
     }
 

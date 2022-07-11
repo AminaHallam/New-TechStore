@@ -77,6 +77,7 @@ function createCartContainer(cartItem) {
     removeItemButtonContainer.addEventListener("click", () => {
         getNrOfCartItems()
         removeItemFromCart(cartItem)
+        location.reload();
     })
     
     let icon = document.createElement("i")

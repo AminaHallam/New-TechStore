@@ -47,7 +47,6 @@ main {
     justify-content: center;
     padding-right: 50px;
     padding-top: 25px;
-    padding-left: 10px;
     font-size: 35px;
     text-decoration: none;
     color: white;
@@ -89,10 +88,13 @@ main {
     font-size: 25px;
     cursor: pointer;
     padding: 15px 25px;
+     
 }
 
 .buttonContainer:hover {
     background-color: lightgray;
+    opacity: 1.5;  
+    transition: all .3s ease-in-out;
 }
 
 .priceText {
@@ -140,8 +142,18 @@ main {
 }
 
 span {
-    padding-top: 15px;
-    font-size: 45px;
+    background-color: white;
+    color: black;
+    width: 25px;
+    height: 25px;
+    margin-top: 10px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    padding: 5px;
+    font-size: 15px;
 }
 
 .sectionCart {
@@ -225,8 +237,8 @@ span {
     }
     
     span {
-        padding-top: 15px; 
-        font-size: 25px;
+        
+        font-size: 15px;
     }
     .priceText {
         font-size: 15px;
