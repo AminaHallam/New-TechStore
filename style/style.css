@@ -156,11 +156,6 @@ span {
     font-size: 15px;
 }
 
-.sectionCart {
-    display: flex;
-    flex-direction: row; 
-    justify-content: center;
-}
 
 .kundvagnSida {
     display: flex;
