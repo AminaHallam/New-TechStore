@@ -1,10 +1,10 @@
 # New-TechStore
 Started a new project based on a past school project TechStore. 
 
-krav på prjektet: 
+project requirements
 
-- Navigationsbar
+- Navigation Bar
 
-- Startsida
+- Home page
 
-- Kundvagnssida
+- Shopping cart page
