@@ -91,6 +91,10 @@ main {
     padding: 15px 25px;
 }
 
+.buttonContainer:hover {
+    background-color: lightgray;
+}
+
 .priceText {
     display: flex;
     align-items: center;
