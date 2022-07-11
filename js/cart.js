@@ -194,7 +194,7 @@ function completePurchase(cart) {
     endOfSaleButton.classList.add("endOfSaleButton")
     endOfSaleButton.innerText = "Submit"
     endOfSaleButton.addEventListener("click", () => {
-        alert("Thank you for your purchase")
+        alert("Thank you for your purchase! We will send your order soon 📦 💨 ")
         localStorage.removeItem("cart")
         window.location = "../index.html"
     })
